@@ -1,7 +1,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: "week-04-analytics-engineering"
+name: "week_04_analytics_engineering"
 version: "1.0.0"
 config-version: 2
 
@@ -34,16 +34,13 @@ clean-targets: # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  week-04-analytics-engineering:
-    # Applies to all files under models/example/
-    core:
-      +materialized: table
+  core:
+    +materialized: table
 
 vars:
   payment_type_values: [1, 2, 3, 4, 5, 6]
 
 seeds:
-  week-04-analytics-engineering:
-    taxi_zone_lookup:
-      +column_types:
-        locationid: numeric
+  taxi_zone_lookup:
+    +column_types:
+      locationid: numeric
