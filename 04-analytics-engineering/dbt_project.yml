@@ -34,13 +34,15 @@ clean-targets: # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  core:
-    +materialized: table
+  week_04_analytics_engineering:
+    core:
+      +materialized: table
 
 vars:
   payment_type_values: [1, 2, 3, 4, 5, 6]
 
 seeds:
-  taxi_zone_lookup:
-    +column_types:
-      locationid: numeric
+  week_04_analytics_engineering:
+    taxi_zone_lookup:
+      +column_types:
+        locationid: numeric
